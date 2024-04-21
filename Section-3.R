@@ -61,8 +61,8 @@ preds = as.factor(as.numeric(log_preds>.5))
 confusionMatrix(data=preds, reference=as.factor(y.test), positive="1")
 
 ############### Exercise - 3 (LDA-Assumptions) ###############
-library(MASS) ## for LDA
 rm(list=ls())
+library(MASS) ## for LDA and QDA
 set.seed(4061)
 df = iris
 attach(df)
@@ -79,7 +79,7 @@ df$Species = NULL
 for(i in 1:4){
   print(bartlett.test(df[,i]~df$is.virginica)$p.value)
 }
-
+## Covariance of indiviual predictor are same for the different class
 ## H0: All the variance are equal (1st Feature => 0.94)
 ## Ha: Variances are not equal (2=>0.0025, 3=>1.94*10^-11, 4=>1.695*10^-7)
 
