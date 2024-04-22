@@ -158,4 +158,4 @@ acc_qda ## 98%
 #QDA: More flexible, can capture non-linear relationships.
 #Computational Efficiency:
 #LDA: Generally more computationally efficient due to simpler assumptions.
-#QDA: Can be more computationally expensive, especially with large datasets and many features.
+#QDA: Can be more computationally expensive, especially with large datasets and many features.
